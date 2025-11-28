@@ -70,6 +70,7 @@ namespace NoisyCowStudios.Bin2Object
         public float ReadSingle() => Reader.ReadSingle();
         public double ReadDouble() => Reader.ReadDouble();
         public new byte ReadByte() => Reader.ReadByte();
+        public sbyte ReadSByte() => Reader.ReadSByte();
 
         public byte[] ReadBytes(long addr, int count) => Reader.ReadBytes(addr, count);
         public long ReadInt64(long addr) => Reader.ReadInt64(addr);
@@ -79,6 +80,7 @@ namespace NoisyCowStudios.Bin2Object
         public short ReadInt16(long addr) => Reader.ReadInt16(addr);
         public ushort ReadUInt16(long addr) => Reader.ReadUInt16(addr);
         public byte ReadByte(long addr) => Reader.ReadByte(addr);
+        public sbyte ReadSByte(long addr) => Reader.ReadSByte(addr);
         public bool ReadBoolean(long addr) => Reader.ReadBoolean(addr);
 
         public T ReadObject<T>(long addr) where T : new() => Reader.ReadObject<T>(addr);

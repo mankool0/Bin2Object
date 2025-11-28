@@ -126,6 +126,13 @@ namespace NoisyCowStudios.Bin2Object
             }
         }
 
+        public sbyte ReadSByte(long addr) {
+            lock (readLock) {
+                Position = addr;
+                return ReadSByte();
+            }
+        }
+
         public bool ReadBoolean(long addr) {
             lock (readLock) {
                 Position = addr;
